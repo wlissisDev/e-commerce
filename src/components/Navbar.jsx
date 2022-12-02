@@ -80,8 +80,8 @@ export const Navbar = () => {
         </Center>
 
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>SING IN</MenuItem>
+          <MenuItem>REGISTRAR</MenuItem>
+          <MenuItem>ENTRAR</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlinedIcon/>
