@@ -1,5 +1,6 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
-import React, { useState } from 'react'
+import React, { useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import styled from 'styled-components';
 
 import { sliderItems } from '../data'
@@ -92,6 +93,8 @@ export const Slider = () => {
         }
     }
 
+    const navigate = useNavigate();
+
     return (
         <Container>
             <Arrow direction="left" onClick={() => handleClick("left")}>
@@ -106,7 +109,7 @@ export const Slider = () => {
                         <InfoContainer>
                             <Title>{item.title}</Title>
                             <Desc>{item.desc}</Desc>
-                            <Button>VER AGORA</Button>
+                            <Button onClick={()=>navigate('/product')}>VER AGORA</Button>
                         </InfoContainer>
                     </Slide>
                 ))}

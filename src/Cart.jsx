@@ -5,6 +5,7 @@ import { Footer } from './components/Footer'
 import { Navbar } from './components/Navbar'
 import styled from 'styled-components'
 import {mobile} from './responsive'
+import {useNavigate} from 'react-router-dom'
 
 const Container = styled.div`
 
@@ -160,6 +161,7 @@ const Button = styled.button`
 `
 
 export const Cart = () => {
+    const navigate = useNavigate()
     return (
         <Container>
             <Navbar />
@@ -167,7 +169,7 @@ export const Cart = () => {
             <Wrapper>
                 <Title>SEU CARRINHO</Title>
                 <Top>
-                    <TopButton>CONTINUAR NA LOJA</TopButton>
+                    <TopButton onClick={()=>navigate("/")}>CONTINUAR NA LOJA</TopButton>
                     <TopTexts>
                         <TopText>Carrinho (2)</TopText>
                         <TopText>Lista de desejos (0)</TopText>

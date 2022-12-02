@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import {mobile} from '../responsive'
-
+import{useNavigate}from 'react-router-dom'
 const Container = styled.div`
     flex: 1;
     margin: 3px;
@@ -45,12 +45,14 @@ const Button = styled.button`
 `;
 
 export const CategoryItem = ({ item }) => {
+
+    const navigate = useNavigate()
     return (
         <Container>
             <Image src={item.img} />
             <Info>
                 <Title>{item.title}</Title>
-                <Button>VER AGORA</Button>
+                <Button onClick={()=>navigate("/list")}>VER AGORA</Button>
             </Info>
         </Container>
     )

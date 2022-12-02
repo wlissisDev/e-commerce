@@ -1,6 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import styled from 'styled-components'
 import Badge from '@mui/material/Badge';
 
@@ -73,6 +74,9 @@ const MenuItem = styled.div`
 `;
 
 export const Navbar = () => {
+  
+  const navigate = useNavigate()
+
   return (
     <Container>
       <Wrapper>
@@ -90,8 +94,8 @@ export const Navbar = () => {
         </Center>
 
         <Right>
-          <MenuItem>REGISTRAR</MenuItem>
-          <MenuItem>ENTRAR</MenuItem>
+          <MenuItem onClick={()=>navigate("/register")}>REGISTRAR</MenuItem>
+          <MenuItem onClick={()=>navigate("/login")}>ENTRAR</MenuItem>
           <MenuItem>
             <Badge badgeContent={2} color="primary">
               <ShoppingCartOutlinedIcon/>

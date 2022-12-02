@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import styled from 'styled-components'
 import { ShoppingCartOutlined, SearchOutlined, FavoriteBorderOutlined } from '@mui/icons-material'
 
@@ -66,15 +67,16 @@ const Icon = styled.div`
     }
 `;
 export const Product = ({ item }) => {
+    const navigate = useNavigate()
     return (
         <Container>
             <Circle />
             <Image src={item.img} />
             <Info>
-                <Icon>
+                <Icon onClick={()=>navigate("/list")}>
                     <SearchOutlined />
                 </Icon>
-                <Icon>
+                <Icon onClick={()=>navigate("/cart")}>
                     <ShoppingCartOutlined />
                 </Icon>
                 <Icon>

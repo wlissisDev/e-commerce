@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {mobile} from './responsive'
+import {useNavigate} from 'react-router-dom'
 
 const Container = styled.div`
     width: 100vw;
@@ -53,6 +54,9 @@ const Button = styled.button`
 `
 
 export const Login = () => {
+
+    const navigate = useNavigate()
+
     return (
         <Container>
             <Wrapper>
@@ -61,7 +65,7 @@ export const Login = () => {
                     <Input placeholder='usuário' />
                     <Input placeholder='senha' />
                    
-                    <Button>CONFIRMAR</Button>
+                    <Button onClick={()=>navigate('/')}>CONFIRMAR</Button>
                     <Agreemente>Ainda não possue conta? <a href='/register'>CRIAR CONTA</a></Agreemente>
                 </Form>
             </Wrapper>
