@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Announcement } from './components/Announcement'
 import { Categories } from './components/Categories';
 import { Navbar } from './components/Navbar'
+import { NewsLetter } from './components/NewsLetter';
 import { Products } from './components/Products';
 import { Slider } from './components/Slider'
 
@@ -21,6 +22,7 @@ function App() {
         <Slider />
         <Categories/>
         <Products/>
+        <NewsLetter/>
       </div>
   )
 }
