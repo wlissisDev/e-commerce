@@ -12,24 +12,28 @@ const Container = styled.div`
     justify-content: center;
 `
 const Wrapper = styled.div`
-    width: 40%;
+    width: 30%;
     padding: 20px;
     background-color: white;
     ${mobile({width:"80%"})}
+
+ 
 
 `
 const Title = styled.h1`
     font-size: 24px;
     font-weight: 300;
+    text-align: center;
 `
 const Form = styled.form`
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 
 `
 const Input = styled.input`
     flex: 1;
-    min-width: 40%;
+    width: 70%;
     margin:20px 10px 0px;
     padding: 10px;
 `
@@ -45,23 +49,20 @@ const Button = styled.button`
     color: white;
     cursor: pointer;
     font-size: 16px;
-    margin: auto;
+    margin: 20px auto;
 `
 
-export const Register = () => {
+export const Login = () => {
     return (
         <Container>
             <Wrapper>
-                <Title>CRIAR UMA CONTA</Title>
+                <Title>ENTRAR</Title>
                 <Form>
-                    <Input placeholder='nome' />
-                    <Input placeholder='sobrenome' />
                     <Input placeholder='usuário' />
-                    <Input placeholder='email' />
                     <Input placeholder='senha' />
-                    <Input placeholder='confirme senha' />
-                    <Agreemente>Ao cria sua conta você concorda com a nossa <b>POLITICA DE PRIVACIDADE</b></Agreemente>
-                    <Button>CRIAR</Button>
+                   
+                    <Button>CONFIRMAR</Button>
+                    <Agreemente>Ainda não possue conta? <a href='/register'>CRIAR CONTA</a></Agreemente>
                 </Form>
             </Wrapper>
         </Container>
